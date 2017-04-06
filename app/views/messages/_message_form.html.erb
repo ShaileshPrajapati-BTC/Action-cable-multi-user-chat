@@ -1,6 +1,10 @@
-
-
-  <label for="message_your_message">Your message</label>:
-    <textarea class="form-control" data-textarea="message" name="message[content]" id="message_content">
+<div class="input-group">
+    <textarea class="form-control input-sm" data-textarea="message" name="message[content]" id="message_content">
     </textarea>
-  <input type="submit" name="commit" value="send" class="btn btn-primary" style="display: none" data-send="message" data-disable-with="send" />
+    <span class="input-group-btn">
+        <button class="btn btn-warning btn-lg" id="btn-chat">
+            Send</button>
+    </span>
+</div>
+
+
