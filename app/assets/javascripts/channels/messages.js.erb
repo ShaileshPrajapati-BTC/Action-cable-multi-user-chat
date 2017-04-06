@@ -1,6 +1,5 @@
 $(document).on('turbolinks:load', function() {
   submitNewMessage();
-  $( "[data-parent]" ).trigger("click");
 });
 
 
@@ -21,7 +20,7 @@ $(document).on('turbolinks:load', function() {
 <% end %>
 
 function submitNewMessage(){
-  $('textarea#message_content').keydown(function(event) {
+  $('#chat-box').on('keydown','textarea#message_content', function(event) {
     if (event.keyCode == 13) {
         var msg = event.target.value
         var chatroomId = $("[data-chatroom]").data().chatroom;

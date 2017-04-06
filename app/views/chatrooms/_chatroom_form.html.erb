@@ -1,9 +1,15 @@
 <div class="chatroom-form">
   <%= form_for chatroom, remote: true do |f| %>
-    <div class="input-group">
-      <span class="input-group-addon">topic:</span>
-      <%= f.text_field :topic, class: "form-control"%>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="input-group">
+          <span class="input-group-addon">topic:</span>
+          <%= f.text_field :topic, class: "form-control"%>
+        </div>
+      </div>
+      <div class="col-md-4" style="margin-top: -5px;">
+        <%= f.submit "Add", class: "btn btn-primary", id: "create-chatroom" %>      
+      </div>
     </div>
-    <%= f.submit class: "btn btn-primary", id: "create-chatroom" %>
   <% end %>
 </div>
