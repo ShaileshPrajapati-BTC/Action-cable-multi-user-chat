@@ -16,7 +16,10 @@ class ApplicationController < ActionController::Base
   def log_in(user_id)
     cookies.signed[:user_id] = user_id
   end
-
+  
+  def reset_session
+    cookies.delete :user_id
+  end
 
   protected
 
